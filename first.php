@@ -12,16 +12,7 @@ $conn = mysqli_connect($servername,$username,$password,$database);
 
 if($conn){
 
-    $sql = "SELECT * FROM `users`";
-    $result = mysqli_query($conn,$sql);
-
-    if(!$result){
-
-        echo "You are not connected with table ".mysqli_connect_error();
-    }
-    else{
-        echo "Connected Successfully with table";
-    }
+    echo "You are connected successfully";
 }
 else{
 
