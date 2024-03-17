@@ -1,3 +1,6 @@
+<?php
+echo ' 
+
 <!doctype html>
 <html lang="en">
 
@@ -50,7 +53,7 @@
         </div>
     </div>
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->';
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -62,8 +65,7 @@
     </script>
 </body>
 
-</html>
-<?php
+</html>';
 
 
 $servername = "localhost";
@@ -79,7 +81,7 @@ if(!$conn){
     echo "You are not connected Successfully".mysqli_connect_error();
 }
 else{
-
+    //Insertion Code
     if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
         
@@ -116,10 +118,52 @@ else{
    
 }
 
+};
+
+//Insertion Code End
+
+//Fetching Code
+$sql2 = "SELECT * FROM `users`";
+$result2 = mysqli_query($conn,$sql2);
+
+
+if($result2){
+
+echo '<table class="container mt-4">
+  <thead>
+    <tr class="mb-4">
+      <th>No</th>
+      <th >Name</th>
+      <th >Email</th>
+      <th >Password</th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  ';
+  
+while ($row = mysqli_fetch_array($result2) ) {
+    echo ' 
+    <tbody>
+    <tr>
+      <td>'.$row['user_id'].'</td>
+      <td>'.$row['user_name'].'</td>
+      <td>'.$row['user_email'].'</td>
+      <td>'.$row['user_password'].'</td>
+      <td><button class="btn btn-dark">Update</button>
+      <button class="btn btn-danger">Delete</button></td>
+    </tr>
+  </tbody>';
+
+
+
 }
+
+echo '</table>';
+}
+
+//Fetching code
 
 // $name = "Hassan";
 // echo "hello $name";
 // echo 'Hello '.$name;
 
-?>
