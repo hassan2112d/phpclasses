@@ -27,8 +27,14 @@ $result = mysqli_query($conn,$sql);
 if($result){
 
     
+    echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Succesfully Deleted');
+    window.location.href='http://localhost/practisephp/forminsert.php';
+    </script>");
 
-    header('Location: forminsert.php?deleted=success');
+       
+    
+    
 
 }
 else{

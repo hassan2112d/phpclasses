@@ -1,9 +1,5 @@
 <?php
 
-if($_GET['deleted'] == 'success'){
-
-    echo "<script>alert('Deleted Successfully');</script>";
-}
 
 echo ' 
 
@@ -155,7 +151,7 @@ while ($row = mysqli_fetch_array($result2) ) {
       <td>'.$row['user_name'].'</td>
       <td>'.$row['user_email'].'</td>
       <td>'.$row['user_password'].'</td>
-      <td><button class="btn btn-dark">Update</button>
+      <td><a href="update_data.php?update_id='.$row['user_id'].'" ><button class="btn btn-dark">Update</button></a>
       <a href="delete_data.php?delete_id='.$row['user_id'].'"><button class="btn btn-danger">Delete</button></a></td>
     </tr>
   </tbody>';
