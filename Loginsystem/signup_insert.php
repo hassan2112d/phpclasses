@@ -10,9 +10,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     $age = $_POST['age'];
+    $image = $_FILES['image'];
 
+    echo $image;
 
-    $sql = "INSERT INTO `users` (`user_name`, `user_email`, `user_pass`, `user_age`) VALUES ('$name', '$email', '$pass', '$age')";
+    $password = password_hash($pass , PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO `users` (`user_name`, `user_email`, `user_pass`, `user_age`) VALUES ('$name', '$email', '$password', '$age')";
 
     $result = mysqli_query($conn,$sql);
 

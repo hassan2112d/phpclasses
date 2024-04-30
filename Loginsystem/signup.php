@@ -31,6 +31,10 @@ echo '
   <input type="integer" name="age" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Age">
 </div>
 <div class="form-group">
+  <label for="exampleInputEmail1">Image Upload :</label>
+  <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+</div>
+<div class="form-group">
   <label for="exampleInputPassword1">Password:</label>
   <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
 </div>

@@ -3,11 +3,11 @@
 
 <?php 
 
-$_SESSION;
+// $_SESSION;
 
-session_start();
-session_destroy();
-session_unset();
+// session_start();
+// session_destroy();
+// session_unset();
 
 
 
