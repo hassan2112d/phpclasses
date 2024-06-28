@@ -51,7 +51,7 @@ if(isset($_POST['submit'])) {
     if(mysqli_num_rows($result) > 0) {
 
         $row = mysqli_fetch_assoc($result);
-        if(password_verify($password, $row['user_pass'])) {
+        if(password_verify($password , $row['user_pass'])) {
                
             $_SESSION['useremail'] = $useremail;
 
@@ -65,6 +65,7 @@ if(isset($_POST['submit'])) {
         echo "No user found with that username.";
     }
 }
+
 ?>
 
 

@@ -2,10 +2,10 @@
 
 include '../Loginsystem/db_connect.php';
 
-
+//echo 1;
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-
+  //echo 1;
     $name = $_POST['name'];
     $email = $_POST['email'];
     $pass = $_POST['pass'];
@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $result = mysqli_query($conn,$sql);
 
     if($result){
-
+//echo 1;
 
         echo "You are registered Successfully";
 
