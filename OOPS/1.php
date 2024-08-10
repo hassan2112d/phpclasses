@@ -1,7 +1,6 @@
 What is mean by OOPs?
 // OOPS stand for Object oriented Programming
 
-
 <?php 
 
 class student{
